@@ -6,7 +6,9 @@ const Search = () => (
   <div className="search">
     {/* print data.json */}
     {/* <pre><code>{JSON.stringify(preload, null, 4)}</code></pre> */}
-    {preload.shows.map(show => <ShowCard show={show} />)}
+    <div>
+      {preload.shows.map(show => <ShowCard key={show.imdbID} {...show} />)}
+    </div>
   </div>
 );
 
